@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+
+*,*::after,*::before
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img
+{
+    width: 100%;
+}
+
+body
+{
+    background-image: url("bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.61);
+    background-blend-mode: darken;
+    font-family: 'Kanit', sans-serif;
+}
+
+.container
+{
+    margin: 0 auto;
+    max-width: 1200px;
+    background-color: black;
+    position: relative;
+    padding-bottom: 5rem;
+}
+
+nav
+{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 1rem;
+    background-image: linear-gradient(to left bottom,rgba(34, 110, 85, 0.918), rgba(148, 190, 253, 0.911));
+    position: fixed;
+    border: 4px solid #ADADAD;
+    border-top: none;
+    border-radius: 0 0 20px 20px;
+    z-index: 999;
+    max-width: 1200px;
+}
+
+.logo-img
+{
+    flex-basis: 10%;
+}
+
+nav ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-basis: 50%;
+}
+
+nav ul li
+{
+    flex-basis: auto;
+    text-align: center;
+}
+
+nav a
+{
+    color: white;
+    display: block;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+nav li:hover
+{
+    border-bottom: 3px solid white;
+}
+
+nav li a
+{
+    padding: 1rem;
+}
+
+.hero
+{
+    background-color: green;
+    min-height: 60vh;
+    max-width: 100%;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url("ff7.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-text
+{
+    width: 50%;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    text-align: center;
+}
+.hero-text h1
+{
+    font-weight: bold;
+    font-size: 4rem;
+    color: white;
+}
+.hero-text p
+{
+    font-weight: bold;
+    font-size: 2rem;
+    color: white;
+}
+
+.story-container
+{
+    position: relative;
+    color: white;
+    background-image: linear-gradient(to left bottom,rgba(34, 110, 85, 0.705), rgba(148, 190, 253, 0.705));
+    padding: 2rem;
+    max-width: 60%;
+    border-radius: 10px;
+    margin: 0 auto;
+    z-index: 5;
+    border: 4px solid #ADADAD;
+}
+
+.main-overflow
+{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.story-img-c
+{
+    position: absolute;
+    top: -20%;
+    right: -30%;
+    max-width: 80%;
+    z-index: 1;
+    opacity: 0.5;
+    
+}
+
+.story h1
+{
+    padding: 1rem;
+    font-size: 2rem;
+    border-bottom: 3px solid white;
+    text-align: center;
+}
+
+.story p
+{
+    padding: 1rem;
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.character-header
+{
+    color: white;
+    padding: 3rem 1rem 1rem 4rem;
+    font-size: 2rem;
+    border-bottom: 3px solid white;
+    max-width: 60%;
+    margin: 0 auto;
+}
+
+.charcters-grid
+{
+    border-radius: 20px;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: white;
+    max-width: 80%;
+    margin: 0 auto;
+    background-color: rgba(20, 20, 20, 0.603);
+}
+
+.character-image
+{
+    padding: 2rem;
+}
+
+.character-text
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.character-card
+{
+    background-image: linear-gradient(to left bottom,rgba(34, 110, 85, 0.705), rgba(148, 190, 253, 0.705));
+    border-radius: 10px;
+    color: rgb(209, 209, 209);
+    padding: 1rem 1rem 3rem 1rem;
+    border: 4px solid #ADADAD;
+    flex-basis: 90%;
+}
+
+.character-card h3
+{
+    border-bottom: 3px solid #ADADAD;;
+    color: white;
+    padding-left: 1rem;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-grid
+{
+    display: grid;
+    margin: auto;
+    row-gap: 0.5rem;
+    grid-template-areas: 
+    "age . race"
+    "gender . height"
+    "job job ."
+    "weapon weapon .";
+}
+
+.card-grid span
+{
+    font-weight: bold;
+    color: rgb(177, 177, 177);
+}
+
+.card-grid-age
+{
+    grid-area: age;
+}
+
+.card-grid-race
+{
+    grid-area: race;
+}
+
+.card-grid-job
+{
+    grid-area: job;
+}
+
+.card-grid-gender
+{
+    grid-area: gender;
+}
+
+.card-grid-height
+{
+    grid-area: height;
+}
+
+.card-grid-weapon
+{
+    grid-area: weapon;
+}
+
+.materia
+{
+    color: white;
+    padding: 3rem 1rem 1rem 4rem;
+    font-size: 2rem;
+    border-bottom: 3px solid white;
+    max-width: 60%;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+
+.materia-grid
+{
+    border-radius: 20px;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 4fr ;
+    max-width: 80%;
+    margin: 0 auto;
+    background-image: linear-gradient(to left bottom,rgba(34, 110, 85, 0.705), rgba(148, 190, 253, 0.705));
+    color: rgb(209, 209, 209);
+    border: 4px solid #ADADAD;
+    gap: 1rem;
+}
+
+.materia-image
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.materia-image img
+{
+    max-width: 100px; 
+}
+
+.materia-text
+{
+    padding: 1rem;
+    border-bottom: 3px solid #ADADAD;
+}
+
+.materia-text:last-child
+{
+    border-bottom: none;
+}
+
+@media screen and (max-width: 600px){
+    nav ul
+    {
+        display: none;
+    }
+
+    .charcters-grid
+    {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+        row-gap: 2rem;
+    }
+
+    [data-character-image="cloud"]
+    {
+        order: 1;
+    }
+    [data-character-text="cloud"]
+    {
+        order: 2;
+    }
+    [data-character-image="barr"]
+    {
+        order: 3;
+    }
+    [data-character-text="barr"]
+    {
+        order: 4;
+    }
+    [data-character-image="tifa"]
+    {
+        order: 5;
+    }
+    [data-character-text="tifa"]
+    {
+        order: 6;
+    }
+    [data-character-image="art"]
+    {
+        order: 7;
+    }
+    [data-character-text="art"]
+    {
+        order: 8;
+    }
+    [data-character-image="red"]
+    {
+        order: 9;
+    }
+    [data-character-text="red"]
+    {
+        order: 10;
+    }
+    [data-character-image="cait"]
+    {
+        order: 11;
+    }
+    [data-character-text="cait"]
+    {
+        order: 12;
+    }
+    [data-character-image="cid"]
+    {
+        order: 13;
+    }
+    [data-character-text="cid"]
+    {
+        order: 14;
+    }
+    [data-character-image="seph"]
+    {
+        order: 15;
+    }
+    [data-character-text="seph"]
+    {
+        order: 16;
+    }
+
+    .story h1
+    {
+        font-size: 1.5rem;   
+    }
+
+    .story p
+    {
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+
+    .story-container
+    {
+        padding: 1rem;
+        max-width: 80%;
+    }
+
+
+    
+}
+
+
+@media screen and (max-width: 768px){
+   
+    .charcters-grid
+    {
+        max-width: 100%;
+    }
+    
+}
