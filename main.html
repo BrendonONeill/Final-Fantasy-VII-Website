@@ -9,22 +9,26 @@
         <meta name="keywords" content="HTML, CSS, JavaScript">
         <meta name="author" content="Brendon O'Neill">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         
-        <header class="container">
+        <header class="container-hero" id="home">
             <nav>
                 <div class="logo-img">
-                    <a href="#"><img src="pngfind.com-final-fantasy-png-838172.png" width="100px" alt="Final fantasy 7 logo"></a>
+                    <a href="#home"><img src="images/pngfind.com-final-fantasy-png-838172.png" width="100px" alt="Final fantasy 7 logo"></a>
                 </div>
-                
+                <div class="mobile-nav">
+                    <div class="nav-button" id="navButton">
+                        <img src="images/bars-solid.svg" alt="" width="50px" height="30px">
+                    </div>
+                </div>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Story</a></li>
-                    <li><a href="#">Characters</a></li>
-                    <li><a href="#">Materia</a></li>
-                    <li><a href="#">Images</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#story">Story</a></li>
+                    <li><a href="#characters">Characters</a></li>
+                    <li><a href="#materia">Materia</a></li>
+                    <li><a href="#gallery">Images</a></li>
                 </ul>
             </nav>
             <div class="hero">
@@ -35,21 +39,30 @@
             </div>
         </header>
         <main>
-            <div class="container main-overflow">
+            <div class="off-canvas" id="offCanvas">
+                <ul>
+                    <li><a class="links" href="#home">Home</a></li>
+                    <li><a class="links" href="#story">Story</a></li>
+                    <li><a class="links"  href="#characters">Characters</a></li>
+                    <li><a class="links"  href="#materia">Materia</a></li>
+                    <li><a class="links"  href="#gallery">Images</a></li>
+                </ul>
+            </div>
+            <div class="container-main main-overflow">
             <section class="story-container">
                 <div class="story">
-                    <h1>Story</h1>
+                    <h1 id="story">Story</h1>
                     <p> The game's story follows Cloud Strife, a mercenary who joins an eco-terrorist organization to stop a world-controlling megacorporation from using the planet's life essence as an energy source. Events send Cloud and his allies in pursuit of Sephiroth, a former member of the corporation who seeks to destroy the planet. During the journey, Cloud builds close friendships with his party members, including Aerith Gainsborough, who holds the secret to saving their world.</p>
                 </div>
                 
             </section>
-            <img class="story-img-c" src="18-187115_cloud-strife-final-fantasy-7-cloud-removebg-preview.png" alt="background image of cloud">
+            <img class="story-img-c" src="images/18-187115_cloud-strife-final-fantasy-7-cloud-removebg-preview.png" alt="background image of cloud">
             </div>
-            <div class="container">
-                <h2 class="character-header">Characters</h2>
+            <div class="container-main">
+                <h2 class="character-header" id="characters">Characters</h2>
                 <div class="charcters-grid">
                     <div class="character-image" data-character-image="cloud">
-                        <img src="cloud.png" width="400px" alt="clouds portraits">
+                        <img src="images/cloud.png" width="400px" alt="clouds portraits" loading="lazy">
                     </div>
                     <div class="character-text" data-character-text="cloud">
 
@@ -81,11 +94,11 @@
                         </div>
                     </div>
                     <div class="character-image" data-character-image="barr">
-                        <img src="barr.png" alt="Barrets portraits">
+                        <img src="images/barr.png" alt="Barrets portraits" loading="lazy">
                     </div>
 
                     <div class="character-image" data-character-image="tifa">
-                        <img src="tifa.png" alt="Tifas portraits">
+                        <img src="images/tifa.png" alt="Tifas portraits" loading="lazy">
                     </div>
                     <div class="character-text" data-character-text="tifa">
                         <div class="character-card">
@@ -114,10 +127,10 @@
                         </div>
                     </div>
                     <div class="character-image" data-character-image="art">
-                        <img src="art.png" alt="Aeriths portrait">
+                        <img src="images/art.png" alt="Aeriths portrait" loading="lazy">
                     </div>
                     <div class="character-image" data-character-image="red">
-                        <img src="red13.png" width="400px" alt="Red 13 portrait">
+                        <img src="images/red13.png" width="400px" alt="Red 13 portrait" loading="lazy"> 
                     </div>
                     <div class="character-text" data-character-text="red">
 
@@ -149,11 +162,11 @@
                         </div>
                     </div>
                     <div class="character-image" data-character-image="cait">
-                        <img src="cait.png" alt="cait sith portrait">
+                        <img src="images/cait.png" alt="cait sith portrait" loading="lazy">
                     </div>
 
                     <div class="character-image" data-character-image="cid">
-                        <img src="cid.png" width="400px" alt="cid portrait">
+                        <img src="images/cid.png" width="400px" alt="cid portrait" loading="lazy">
                     </div>
                     <div class="character-text" data-character-text="cid">
 
@@ -185,43 +198,43 @@
                         </div>
                     </div>
                     <div class="character-image" data-character-image="seph">
-                        <img src="seph.png" alt="Sephiroth portrait">
+                        <img src="images/seph.png" alt="Sephiroth portrait" loading="lazy">
                     </div>
                 </div>
             </div>
-            <div class="container">
-                <h3 class="materia">Materia</h3>
+            <div class="container-main">
+                <h3 class="materia" id="materia">Materia</h3>
                 <div class="materia-grid">
                     <div class="materia-image">
-                        <img src="magic.webp" alt="materia">
+                        <img src="images/magic.webp" alt="materia" loading="lazy">
                     </div>
                     <div class="materia-text">
                         <h3>Magic Materia</h3>
                         <p>Used to cast spells, including damaging, healing, and status-inducing spells. Also affects Strength and Magic stats.</p>
                     </div>
                     <div class="materia-image">
-                        <img src="command.webp" alt="materia">
+                        <img src="images/command.webp" alt="materia" loading="lazy">
                     </div>
                     <div class="materia-text">
                         <h3>Command Materia</h3>
                         <p>	Allows the use of extra commands in battle like Throw and Steal.</p>
                     </div>
                     <div class="materia-image">
-                        <img src="support.webp" alt="materia">
+                        <img src="images/support.webp" alt="materia" loading="lazy">
                     </div>
                     <div class="materia-text">
                         <h3>Support Materia</h3>
                         <p>Can be linked to other Materia in order to enhance their effects.</p>
                     </div>
                     <div class="materia-image">
-                        <img src="summon.webp" alt="materia">
+                        <img src="images/summon.webp" alt="materia" loading="lazy">
                     </div>
                     <div class="materia-text">
                         <h3>Summon Materia</h3>
                         <p>Used to summon creatures to aid in battle.</p>
                     </div>
                     <div class="materia-image">
-                        <img src="inde.webp" alt="materia">
+                        <img src="images/inde.webp" alt="materia" loading="lazy">
                     </div>
                     <div class="materia-text">
                         <h3>Independent Materia</h3>
@@ -231,12 +244,51 @@
                 
             </div>
 
-            <div class="container">
-                <h3 class="materia">Image Gallery</h3>
+            <div class="container-main">
+                <h3 class="materia" id="gallery">Image Gallery</h3>
+                <div class="image-gallery-grid">
+
+                    <div class="image-gallery-card">
+                        <img src="images/ff7-scene-1.jpg" alt="Cloud on a train" loading="lazy">
+                    </div>
+
+                    <div class="image-gallery-card">
+                        <img src="images/ff7-scene-2.png" alt="Cloud and Tifa as kids" loading="lazy">
+                    </div>
+
+                    <div class="image-gallery-card">
+                        <img src="images/ff7-scene-3.png" alt="Train station" loading="lazy">
+                    </div>
+
+                    <div class="image-gallery-card">
+                        <img src="images/ff7-scene-4.png" alt="Aerith walking down the street" loading="lazy">
+                    </div>
+
+                    <div class="image-gallery-card">
+                        <img src="images/ff7-scene-5.png" alt="Cloud in a reactor" loading="lazy">
+                    </div>
+
+                    <div class="image-gallery-card">
+                        <img src="images/ff7-scene-6.png" alt="Cloud getting chased by guards" loading="lazy">
+                    </div>
+
+                    <div class="image-gallery-card">
+                        <img src="images/ff7-scene-7.jpg" alt="The main building in Midgard" loading="lazy">
+                    </div>
+
+                    <div class="image-gallery-card">
+                        <img src="images/ff7-scene-8.jpg" alt="Cloud on a bike" loading="lazy">
+                    </div>
+
+                    <div class="image-gallery-card">
+                        <img src="images/ff7-scene-9.jpg" alt="Cloud look up at the main building in Midgard" loading="lazy">
+                    </div>
+
+                </div>
 
             </div>
         </main>
         
-        <script src="" async defer></script>
+        <script src="js/main.js" async defer></script>
     </body>
 </html>

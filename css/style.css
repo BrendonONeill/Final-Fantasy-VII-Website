@@ -14,7 +14,7 @@ img
 
 body
 {
-    background-image: url("bg.jpg");
+    background-image: url("../images/bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-color: rgba(0, 0, 0, 0.61);
@@ -22,13 +22,27 @@ body
     font-family: 'Kanit', sans-serif;
 }
 
-.container
+.off-canvas-open
+{
+    overflow-y: hidden;
+}
+
+.container-hero
 {
     margin: 0 auto;
     max-width: 1200px;
     background-color: black;
     position: relative;
-    padding-bottom: 5rem;
+    padding-bottom: 20rem;
+}
+
+.container-main
+{
+    margin: 0 auto;
+    max-width: 1200px;
+    background-color: black;
+    position: relative;
+    padding-block: 10rem;
 }
 
 nav
@@ -44,6 +58,11 @@ nav
     border-radius: 0 0 20px 20px;
     z-index: 999;
     max-width: 1200px;
+}
+
+.mobile-nav
+{
+    display: none;
 }
 
 .logo-img
@@ -85,14 +104,63 @@ nav li:hover
 nav li a
 {
     padding: 1rem;
+    
+}
+
+.off-canvas
+{
+    min-height: 91vh;
+    width: 100vw;
+    background-image: linear-gradient(to left bottom,rgba(34, 110, 85, 1), rgba(148, 190, 253, 1));
+    border: 4px solid #ADADAD;
+    border-radius: 0 20px 20px 0;
+    border-left: none;
+    position: fixed;
+    bottom: 0;
+    left: -100%;
+    z-index: 50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 1s ease-in-out;
+}
+
+.active
+{
+    left: 0;
+}
+
+.off-canvas ul
+{
+    list-style-type: none;
+}
+
+.off-canvas ul li
+{
+    border-bottom: 1px solid white;
+}
+
+.off-canvas ul li a
+{
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 2rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.off-canvas ul li:last-child
+{
+    border-bottom: none;
 }
 
 .hero
 {
-    background-color: green;
-    min-height: 60vh;
+    background-color: black;
+    min-height: 70vh;
     max-width: 100%;
-    background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url("ff7.jpg");
+    background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url("../images/ff7.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -110,13 +178,14 @@ nav li a
 .hero-text h1
 {
     font-weight: bold;
-    font-size: 4rem;
+    font-size: 5rem;
     color: white;
+    border-bottom: 3px solid white;
 }
 .hero-text p
 {
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: white;
 }
 
@@ -142,7 +211,7 @@ nav li a
 .story-img-c
 {
     position: absolute;
-    top: -20%;
+    top: 0;
     right: -30%;
     max-width: 80%;
     z-index: 1;
@@ -314,10 +383,90 @@ nav li a
     border-bottom: none;
 }
 
+.image-gallery-grid
+{
+    border-radius: 20px;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    color: white;
+    max-width: 80%;
+    margin: 0 auto;
+    gap: 2rem;
+    background-color: rgba(20, 20, 20, 0.603);
+}
+
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1000px){
+
+
+    .hero
+    {
+        min-height: 100vh;
+    }
+
+    .hero-text h1
+    {
+        font-size: 3.2rem;
+    }
+    .hero-text p
+    {
+        font-size: 1.8rem;
+    }
+   
+    .story-img-c
+    {
+        top: 20%;
+        transform: translate(0, -20%);
+    }
+    .charcters-grid
+    {
+        max-width: 100%;
+    } 
+}
+
 @media screen and (max-width: 600px){
+    
+    .hero
+    {
+        min-height: 100vh;
+    }
+    .container-hero
+    {
+        margin: 0 auto;
+        max-width: 1200px;
+        background-color: black;
+        position: relative;
+        padding-bottom: 5rem;
+    }
+
+    .container-main
+    {
+        margin: 0 auto;
+        max-width: 1200px;
+        background-color: black;
+        position: relative;
+        padding-block: 5rem;
+    }
+    .hero-text h1
+    {
+        font-size: 1.8rem;
+    }
+    .hero-text p
+    {
+        font-size: 1.2rem;
+    }
+
     nav ul
     {
         display: none;
+    }
+
+    .mobile-nav
+    {
+        display: block;
     }
 
     .charcters-grid
@@ -392,6 +541,11 @@ nav li a
         order: 16;
     }
 
+    .character-card h3
+    {
+        font-size: 1.5rem; 
+    }
+
     .story h1
     {
         font-size: 1.5rem;   
@@ -409,16 +563,22 @@ nav li a
         max-width: 80%;
     }
 
-
-    
-}
-
-
-@media screen and (max-width: 768px){
-   
-    .charcters-grid
+    .story-img-c
     {
-        max-width: 100%;
+        display: none;
     }
+
+    .materia-grid
+    {
+        grid-template-columns: 1fr ;
+        gap: 2rem;
+    }
+
+    .image-gallery-grid
+    {
+        grid-template-columns: 1fr;
+    }
+
+
     
 }
