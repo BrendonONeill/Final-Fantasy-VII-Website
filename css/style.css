@@ -12,6 +12,13 @@ img
     width: 100%;
 }
 
+:root
+{
+    --main-bg-color: pink;
+    --ui-colour1: rgba(0, 1, 108, 0.918);
+    --ui-colour2: rgba(1, 0, 48, 0.911);
+}
+
 body
 {
     background-image: url("../images/bg.jpg");
@@ -31,7 +38,7 @@ body
 {
     margin: 0 auto;
     max-width: 1200px;
-    background-color: black;
+    
     position: relative;
     padding-bottom: 20rem;
 }
@@ -51,13 +58,42 @@ nav
     justify-content: space-between;
     color: white;
     padding: 1rem;
-    background-image: linear-gradient(to left bottom,rgba(34, 110, 85, 0.918), rgba(148, 190, 253, 0.911));
+    background-image: linear-gradient(to left bottom, var(--ui-colour1), var(--ui-colour2));
     position: fixed;
     border: 4px solid #ADADAD;
     border-top: none;
     border-radius: 0 0 20px 20px;
-    z-index: 999;
+    z-index: 50;
     max-width: 1200px;
+}
+
+.github
+{
+    background-image: linear-gradient(to left bottom, var(--ui-colour1), var(--ui-colour2));
+    border: 4px solid #ADADAD;
+    border-radius: 20px;
+    position: fixed;
+    z-index: 2;
+    color: white;
+    bottom: 5px;
+    right: 70%;
+    width: 10%;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+
+.github a
+{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.github a:hover
+{
+    color: #ADADAD;
 }
 
 .mobile-nav
@@ -77,15 +113,16 @@ nav ul
     padding: 0;
     display: flex;
     flex-flow: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-    flex-basis: 50%;
+    flex-basis: 80%;
 }
 
 nav ul li
 {
     flex-basis: auto;
     text-align: center;
+    position: relative;
 }
 
 nav a
@@ -96,10 +133,26 @@ nav a
     font-size: 1.5rem;
 }
 
-nav li:hover
+.cursor-ff
 {
-    border-bottom: 3px solid white;
+    display: none;
+    position: absolute;
+    top: 65%;
+    left: -40px;
+    transform: translate(0, -50%);
 }
+
+
+nav li:hover > .cursor-ff
+{
+    display: block;
+}
+
+nav li:hover > a
+{
+    color: #ADADAD;
+}
+
 
 nav li a
 {
@@ -111,19 +164,49 @@ nav li a
 {
     min-height: 91vh;
     width: 100vw;
-    background-image: linear-gradient(to left bottom,rgba(34, 110, 85, 1), rgba(148, 190, 253, 1));
+    background-image: linear-gradient(to left bottom, var(--ui-colour1), var(--ui-colour2));
     border: 4px solid #ADADAD;
     border-radius: 0 20px 20px 0;
     border-left: none;
     position: fixed;
     bottom: 0;
-    left: -100%;
+    left: -110%;
     z-index: 50;
     display: flex;
-    justify-content: center;
+    flex-flow: column;
+    justify-content: space-between;
     align-items: center;
     transition: 1s ease-in-out;
+    padding-bottom: 1rem;
 }
+
+.off-canvas-ui-container
+{
+    width: 95%;
+}
+.off-canvas-ui-gil
+{
+    background-image: linear-gradient(to left bottom, var(--ui-colour1), var(--ui-colour2));
+    border: 4px solid #ADADAD;
+    border-radius: 10px;
+    padding: 1rem;
+    color: white;
+    width: 50%;
+    margin: 0 0 0 50%;
+
+}
+
+.off-canvas-ui-location
+{
+    background-image: linear-gradient(to left bottom, var(--ui-colour1), var(--ui-colour2));
+    border: 4px solid #ADADAD;
+    border-radius: 10px;
+    padding: 1rem;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 
 .active
 {
@@ -155,15 +238,25 @@ nav li a
     border-bottom: none;
 }
 
-.hero
+.hero-outside
 {
-    background-color: black;
-    min-height: 70vh;
-    max-width: 100%;
     background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url("../images/ff7.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    width: 100%;
+    min-height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+.hero
+{
+    min-height: 80vh;
+    max-width: 100%;
+    background-color: rgba(0, 0, 0, 0.2);  
 }
 
 .hero-text
@@ -193,7 +286,7 @@ nav li a
 {
     position: relative;
     color: white;
-    background-image: linear-gradient(to left bottom,rgba(34, 110, 85, 0.705), rgba(148, 190, 253, 0.705));
+    background-image: linear-gradient(to left bottom, var(--ui-colour1), var(--ui-colour2));
     padding: 2rem;
     max-width: 60%;
     border-radius: 10px;
@@ -270,7 +363,7 @@ nav li a
 
 .character-card
 {
-    background-image: linear-gradient(to left bottom,rgba(34, 110, 85, 0.705), rgba(148, 190, 253, 0.705));
+    background-image: linear-gradient(to left bottom, var(--ui-colour1), var(--ui-colour2));
     border-radius: 10px;
     color: rgb(209, 209, 209);
     padding: 1rem 1rem 3rem 1rem;
@@ -354,7 +447,7 @@ nav li a
     grid-template-columns: 1fr 4fr ;
     max-width: 80%;
     margin: 0 auto;
-    background-image: linear-gradient(to left bottom,rgba(34, 110, 85, 0.705), rgba(148, 190, 253, 0.705));
+    background-image: linear-gradient(to left bottom, var(--ui-colour1), var(--ui-colour2));
     color: rgb(209, 209, 209);
     border: 4px solid #ADADAD;
     gap: 1rem;
@@ -369,7 +462,8 @@ nav li a
 
 .materia-image img
 {
-    max-width: 100px; 
+    max-width: 100px;
+    border-radius: 20px; 
 }
 
 .materia-text
@@ -393,7 +487,8 @@ nav li a
     max-width: 80%;
     margin: 0 auto;
     gap: 2rem;
-    background-color: rgba(20, 20, 20, 0.603);
+    border: 3px solid #ADADAD;
+    background-image: linear-gradient(to left bottom, var(--ui-colour1), var(--ui-colour2));
 }
 
 
