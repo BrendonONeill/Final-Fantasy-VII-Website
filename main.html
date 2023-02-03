@@ -17,13 +17,13 @@
             <div class="github">
                 <div>
                     <a href="http://" target="_blank" rel="noopener noreferrer">
-                    <img src="images/github.svg" width="40px" height="40px" alt="">
+                    <img class="github-img" src="images/github.svg" width="40px" height="40px" alt="github">
                     <p>GitHub</p>
                 </a>
                 </div>
                 <div>
                     <a href="http://" target="_blank" rel="noopener noreferrer">
-                    <img src="images/folder-closed-solid.svg" width="40px" height="40px"  alt="">
+                    <img class="github-img"  src="images/folder-closed-solid.svg" width="40px" height="40px"  alt="portfolio">
                     <p>Portfolio</p>
                     </a>
                 </div>
@@ -33,8 +33,8 @@
                     <a href="#home"><img src="images/pngfind.com-final-fantasy-png-838172.png" width="100px" alt="Final fantasy 7 logo"></a>
                 </div>
                 <div class="mobile-nav">
-                    <div class="nav-button" id="navButton">
-                        <img src="images/bars-solid.svg" alt="" width="50px" height="30px">
+                    <div class="nav-button" id="navButton" role="button">
+                        <img src="images/bars-solid.svg" alt="nav-button" width="50px" height="30px">
                     </div>
                 </div>
                 <ul>
@@ -52,7 +52,7 @@
                     <li><a href="#materia">Materia</a><div class="cursor-ff">
                         <img src="images/FF7Cursor.webp" alt="">
                     </div></li>
-                    <li><a href="#gallery">Summons</a><div class="cursor-ff">
+                    <li><a href="#summon">Summons</a><div class="cursor-ff">
                         <img src="images/FF7Cursor.webp" alt="">
                     </div></li>
                     <li><a href="#gallery">Images</a><div class="cursor-ff">
@@ -63,7 +63,7 @@
             <div class="hero">
                 <div class="hero-text">
                     <h1>Final Fantasy VII</h1>
-                    <p>Fan Wiki</p>
+                    <p>Fan mini Wiki</p>
                 </div>
             </div>
             
@@ -75,12 +75,17 @@
                     <li><a class="links" href="#story">Story</a></li>
                     <li><a class="links"  href="#characters">Characters</a></li>
                     <li><a class="links"  href="#materia">Materia</a></li>
+                    <li><a class="links"  href="#summon">Summons</a></li>
                     <li><a class="links"  href="#gallery">Images</a></li>
                 </ul>
                 <div class="off-canvas-ui-container">
                     <div class="off-canvas-ui-gil">
-                        <p>Time: </p>
-                        <p>Gil: 1000</p>
+                        <div class="ui-gil-box1"><p>Time: </p></div>
+                        <div class="ui-gil-box2"><p>1:20:58 </p></div>
+                        <div class="ui-gil-box3"><p>Gil: </p></div>
+                        <div class="ui-gil-box4"><p>1000</p></div>
+                        
+                        
                     </div>
                     <div class="off-canvas-ui-location">
                         <p>Midgard section 7</p>
@@ -282,9 +287,62 @@
                 </div>
                 
             </div>
+            <div class="container-main">
+                <h3 class="materia" id="summon">Summons</h3>
+                <div class="summon-grid">
+                    <div class="summon-image">
+                        <img src="images/mog.webp" alt="Choco" width="200px" height="200px">
+                    </div>
+                    <div class="summon-text">
+                        <h3 class="">Choco/Mog</h3>
+                        <p><span class="summon-span">Element:</span> Wind</p>
+                        <p><span class="summon-span">Abilities:</span> DeathBlow!!, Fat-Chocobo</p>
+                    </div>
+                    <div class="summon-image">
+                        <img src="images/shiva.webp" alt="shiva" height="200px">
+                    </div>
+                    <div class="summon-text">
+                        <h3>Shiva</h3>
+                        <p><span class="summon-span">Element: </span> Ice</p>
+                        <p><span class="summon-span">Abilities:</span> Diamond Dust</p>
+                    </div>
+                    <div class="summon-image">
+                        <img src="images/ifi.webp" alt="Ifrit" width="200px" height="200px">
+                    </div>
+                    <div class="summon-text">
+                        <h3>Ifrit</h3>
+                        <p><span class="summon-span">Element: </span> Fire</p>
+                        <p><span class="summon-span">Abilities:</span> Hellfire</p>
+                    </div>
+                    <div class="summon-image">
+                        <img src="images/ram.webp" alt="Ramuh"  height="200px">
+                    </div>
+                    <div class="summon-text">
+                        <h3>Ramuh</h3>
+                        <p><span class="summon-span">Element: </span> Lighting</p>
+                        <p><span class="summon-span">Abilities:</span> Judgement Bolt</p>
+                    </div>
+                    <div class="summon-image">
+                        <img src="images/titan.webp" alt="titan"  height="200px">
+                    </div>
+                    <div class="summon-text">
+                        <h3>Titan</h3>
+                        <p><span class="summon-span">Element: </span> Earth</p>
+                        <p><span class="summon-span">Abilities:</span> Anger of the land</p>
+                    </div>
+                    <div class="summon-image">
+                        <img src="images/Odin.webp" alt="Odin"  height="200px">
+                    </div>
+                    <div class="summon-text">
+                        <h3>Odin</h3>
+                        <p><span class="summon-span">Element: </span> N/A</p>
+                        <p><span class="summon-span">Abilities:</span> Steel Bladed Sword, Gunge Lance</p>
+                    </div>
+                </div>
+            </div>
 
             <div class="container-main">
-                <h3 class="materia" id="gallery">Image Gallery</h3>
+                <h3 class="materia" id="gallery">Gallery</h3>
                 <div class="image-gallery-grid">
 
                     <div class="image-gallery-card">
