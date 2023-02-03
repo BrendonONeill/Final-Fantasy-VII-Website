@@ -40,7 +40,6 @@ body
     max-width: 1200px;
     
     position: relative;
-    padding-bottom: 20rem;
 }
 
 .container-main
@@ -76,7 +75,7 @@ nav
     z-index: 2;
     color: white;
     bottom: 5px;
-    right: 70%;
+    right: 20%;
     width: 10%;
     height: 100px;
     display: flex;
@@ -104,6 +103,9 @@ nav
 .logo-img
 {
     flex-basis: 10%;
+    background-color: white;
+    padding: 0.4rem 0.8rem;
+    border-radius: 10px;
 }
 
 nav ul
@@ -193,7 +195,30 @@ nav li a
     color: white;
     width: 50%;
     margin: 0 0 0 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
 
+.ui-gil-box1
+{
+    flex-basis: 50%;
+}
+
+.ui-gil-box2
+{
+    flex-basis: 50%;
+    text-align: right;
+}
+
+.ui-gil-box3
+{
+    flex-basis: 50%;
+}
+
+.ui-gil-box4
+{
+    flex-basis: 50%;
+    text-align: right;
 }
 
 .off-canvas-ui-location
@@ -240,7 +265,7 @@ nav li a
 
 .hero-outside
 {
-    background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url("../images/ff7.jpg");
+    background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4)), url("../images/ff7v2.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -254,7 +279,7 @@ nav li a
 
 .hero
 {
-    min-height: 80vh;
+    min-height: 100vh;
     max-width: 100%;
     background-color: rgba(0, 0, 0, 0.2);  
 }
@@ -477,6 +502,48 @@ nav li a
     border-bottom: none;
 }
 
+.summon-grid
+{
+    background-color: #ADADAD;
+    padding: 2rem;
+    max-width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+    gap: 2rem;
+    border: 3px solid #ADADAD;
+    background-image: linear-gradient(to left bottom, var(--ui-colour1), var(--ui-colour2));
+    border-radius: 20px;
+    color: #ADADAD;
+    
+}
+
+.summon-image
+{
+    max-width: 200px;
+}
+
+.summon-text
+{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 1rem;
+    border-bottom: 3px solid #ADADAD;
+}
+
+.summon-text h3
+{
+    color: white;
+    font-size: 2rem;
+}
+
+.summon-span
+{
+    color: white;
+}
+
 .image-gallery-grid
 {
     border-radius: 20px;
@@ -492,9 +559,15 @@ nav li a
 }
 
 
+@media screen and (min-width: 1025px) and (max-width: 1440px){
+    .github
+    {
+        width: 15%;
+        right: 10%;
+    }
+}
 
-
-@media screen and (min-width: 768px) and (max-width: 1000px){
+@media screen and (min-width: 769px) and (max-width: 1024px){
 
 
     .hero
@@ -519,10 +592,21 @@ nav li a
     .charcters-grid
     {
         max-width: 100%;
-    } 
+    }
+
+    .github
+    {
+        width: 20%;
+        right: 5%;
+    }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 768px){
+
+    .logo-img
+    {
+        padding: 0;
+    }
     
     .hero
     {
@@ -532,7 +616,6 @@ nav li a
     {
         margin: 0 auto;
         max-width: 1200px;
-        background-color: black;
         position: relative;
         padding-bottom: 5rem;
     }
@@ -574,6 +657,9 @@ nav li a
     [data-character-image="cloud"]
     {
         order: 1;
+        max-width: 300px;
+        max-height: 300px;
+        margin: 0 auto;
     }
     [data-character-text="cloud"]
     {
@@ -582,6 +668,9 @@ nav li a
     [data-character-image="barr"]
     {
         order: 3;
+        max-width: 300px;
+        max-height: 300px;
+        margin: 0 auto;
     }
     [data-character-text="barr"]
     {
@@ -590,6 +679,9 @@ nav li a
     [data-character-image="tifa"]
     {
         order: 5;
+        max-width: 300px;
+        max-height: 300px;
+        margin: 0 auto;
     }
     [data-character-text="tifa"]
     {
@@ -598,6 +690,9 @@ nav li a
     [data-character-image="art"]
     {
         order: 7;
+        max-width: 300px;
+        max-height: 300px;
+        margin: 0 auto;
     }
     [data-character-text="art"]
     {
@@ -606,6 +701,9 @@ nav li a
     [data-character-image="red"]
     {
         order: 9;
+        max-width: 300px;
+        max-height: 300px;
+        margin: 0 auto;
     }
     [data-character-text="red"]
     {
@@ -614,6 +712,9 @@ nav li a
     [data-character-image="cait"]
     {
         order: 11;
+        max-width: 300px;
+        max-height: 300px;
+        margin: 0 auto;
     }
     [data-character-text="cait"]
     {
@@ -622,6 +723,9 @@ nav li a
     [data-character-image="cid"]
     {
         order: 13;
+        max-width: 300px;
+        max-height: 300px;
+        margin: 0 auto;
     }
     [data-character-text="cid"]
     {
@@ -630,6 +734,9 @@ nav li a
     [data-character-image="seph"]
     {
         order: 15;
+        max-width: 300px;
+        max-height: 300px;
+        margin: 0 auto;
     }
     [data-character-text="seph"]
     {
@@ -673,6 +780,40 @@ nav li a
     {
         grid-template-columns: 1fr;
     }
+
+    .github
+    {
+        width: 40%;
+        right: 5%;
+        height: 80px;
+        padding: 1rem;
+    }
+
+    .summon-grid
+    {
+        grid-template-columns: 1fr;
+    }
+
+    .summon-image
+    {
+        margin: 0 auto;
+    }
+
+    .github-img
+    {
+        display: none;
+    }
+
+    .github p
+    {
+        padding: 0.5rem;
+    }
+
+    .off-canvas ul li a
+    {
+        font-size: 1.2rem;
+    }
+    
 
 
     
