@@ -21,10 +21,8 @@ img
 
 body
 {
-    background-image: url("../images/bg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: rgba(0, 0, 0, 0.61);
+    background: rgb(2,4,3);
+    background: linear-gradient(180deg, rgba(2,4,3,1) 57%, rgba(85,123,124,1) 83%, rgba(106,150,146,1) 89%);
     background-blend-mode: darken;
     font-family: 'Kanit', sans-serif;
 }
@@ -567,7 +565,7 @@ nav li a
     }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px){
+@media screen and (min-width: 766px) and (max-width: 1024px){
 
 
     .hero
@@ -599,9 +597,19 @@ nav li a
         width: 20%;
         right: 5%;
     }
+
+    .off-canvas ul
+    {
+        width: 90%;
+    }
+
+    .off-canvas ul li a
+    {
+        font-size: 2rem;
+    }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 765px){
 
     .logo-img
     {
