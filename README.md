@@ -1,7 +1,9 @@
 # Final-Fantasy-VII-Website
 
-This is a site I create to test out my website layout without a framework support and custom css.
-The style of the website is based on Final fantasy 7 from the ps1 I wanted to mimic the style of the UI in the game it is a basic site that is similar to the manual that use to come with ps1 games.
+This is a site I created to test out my website layout using flexbox and css grid without a framework
+support and custom css. The style of the website is based on Final Fantasy 7 from the ps1 I wanted to mimic the style of the UI
+in the game it is a basic site that is similar to the menu UI and manual that use to come with ps1
+games.
 
 
 ## Still working on
