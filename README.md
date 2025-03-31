@@ -14,3 +14,6 @@ Add more content
 sidebar showing on larger screens. 
 background images doesnt look great as it is stretched out. 
 clean up the ui a bit. 
+
+
+## I want to resize this with more content and cleaner look
